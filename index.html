@@ -1,1 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Executor Roblox</title>
+  <style>
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .button-link {
+      display: block;
+      margin: 10px 0;
+      padding: 15px;
+      background-color: #e0e0e0;
+      border-radius: 10px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+    .button-link:hover {
+      background-color: #ccc;
+    }
+    .code-box {
+      background-color: #eee;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 8px;
+      word-break: break-all;
+      margin-top: 20px;
+      font-family: monospace;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Executor Roblox - NATHUB</h1>
+    <a class="button-link" href="https://get.nathub.xyz/loader" target="_blank">Baixar Loader</a>
+
+    <div class="code-box" id="script-code">
+      loadstring(game:HttpGet("https://get.nathub.xyz/loader"))()
+    </div>
+    <button onclick="copiarCodigo()">Copiar Código</button>
+  </div>
+
+  <script>
+    function copiarCodigo() {
+      const codigo = document.getElementById('script-code').innerText;
+      navigator.clipboard.writeText(codigo).then(() => {
+        alert('Código copiado!');
+      });
+    }
+  </script>
+</body>
+</html>
 
